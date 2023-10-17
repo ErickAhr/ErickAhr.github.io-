@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Galería de Fotos</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="meses.html">Meses</a></li>
+                <li><a href="metas.html">Metas</a></li>
+                <li><a href="contactenos.html">Sobre Nosotros</a></li>
+                <li class="active"><a href="galerias.html">Galería</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Estructura HTML de la galería -->
+    <!--fotos-->
+    <h1 id="tgf">Galeria</h1>
+    <br>
+    <h2 id="af">Fotos</h2>
+    <div class="gallery">
+        <img src="4meses.jpeg" alt="Imagen 1" class="gallery-item">
+        <img src="6meses.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen1.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen2.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen3.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen4.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen5.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen6.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen7.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen8.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen9.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen10.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen11.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen12.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen13.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen14.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen15.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen16.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen17.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen18.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen20.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen21.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen22.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen23.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen24.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen25.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen26.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen27.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen28.jpeg" alt="Imagen 2" class="gallery-item">
+        <img src="imagen29.jpeg" alt="Imagen 2" class="gallery-item">
+    </div>
+    <br>
+    <br>
+    <h2 id="af">Videos</h2>
+    <div class="gallery">
+        <video src="video1.mp4" controls class="gallery-item"></video>
+        <video src="video2.mp4" controls class="gallery-item"></video>
+        <video src="video3.mp4" controls class="gallery-item"></video>
+        <video src="video4.mp4" controls class="gallery-item"></video>
+        <video src="video5.mp4" controls class="gallery-item"></video>
+        <video src="video6.mp4" controls class="gallery-item"></video>
+        <video src="video7.mp4" controls class="gallery-item"></video>
+        <video src="video8.mp4" controls class="gallery-item"></video>
+        <video src="video9.mp4" controls class="gallery-item"></video>
+        <video src="video10.mp4" controls class="gallery-item"></video>
+        <video src="video11.mp4" controls class="gallery-item"></video>
+        <video src="video12.mp4" controls class="gallery-item"></video>
+        <video src="video13.mp4" controls class="gallery-item"></video>
+        <video src="video14.mp4" controls class="gallery-item"></video>
+        <video src="5meses.mp4" controls class="gallery-item"></video>
+        <video src="FilmForth Sin título.mp4" controls class="gallery-item"></video>
+
+    </div>
+
+    <!-- Modal para mostrar la imagen completa -->
+    <div class="modal" id="myModal">
+        <span class="close" id="closeModal">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <script>
+        // JavaScript para abrir y cerrar el modal
+        const modal = document.getElementById('myModal');
+        const modalImg = document.getElementById('modalImg');
+        const closeModal = document.getElementById('closeModal');
+
+        // Agregar un evento clic a las imágenes de la galería
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                modal.style.display = 'block';
+                modalImg.src = item.src;
+            });
+        });
+
+        // Cerrar el modal al hacer clic en la "x"
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
